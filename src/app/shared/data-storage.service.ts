@@ -28,15 +28,6 @@ export class DataStorageService {
   }
 
   fetchData() {
-    const data = this.authService.user.pipe(user=>this.http.get<Recipes[]>(
-      'https://recipe-app-73805-default-rtdb.firebaseio.com/recipes.json?auth=' +
-        user.token
-      // {
-      //   params: new HttpParams().set('auth', user.token),
-      // }
-    ))
-
-
     try {return this.authService.user.pipe(
       //TAKE 1 VALUE AND UNSUBSCRIBE AFTER THAT
       take(1),
@@ -63,11 +54,11 @@ export class DataStorageService {
         this.recipeService.setRecipes(recipes);
       })
     );
-      
+
     } catch (error) {
       console.log(error)
-      
+
     }
-    
+
   }
 }
