@@ -126,13 +126,13 @@ export class AuthServiceService {
 
     switch (errorRes.error.error.message) {
       case 'EMAIL_EXISTS':
-        errorMessage = 'Email already exists';
+        errorMessage = 'This email already exists!';
         break;
       case 'INVALID_PASSWORD':
-        errorMessage = 'Invalid password';
+        errorMessage = 'The password is incorrect!';
         break;
       case 'EMAIL_NOT_FOUND':
-        errorMessage = 'Email not found';
+        errorMessage = 'This email is not found!';
         break;
     }
 
