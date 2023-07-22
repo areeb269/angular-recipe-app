@@ -1,0 +1,10 @@
+https://recipe-app-73805.web.app/auth
+
+DEPLOYMENT COMMANDS
+ng build
+npm install -g firebase-tools
+firebase login
+firebase init 
+    --What do you want to use as your public directory? dist/recipe-app
+    --File dist/recipe-app/index.html already exists. Overwrite? No  
+firebase deploy
