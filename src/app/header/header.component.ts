@@ -50,6 +50,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
     // console.log("onFetch called");
   }
 
+  onLogout(){
+    this.authService.logout();
+  }
+
   ngOnDestroy(): void {
     this.userSub.unsubscribe();
   }
