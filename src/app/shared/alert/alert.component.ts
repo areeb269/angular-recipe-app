@@ -6,6 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./alert.component.css']
 })
 export class AlertComponent {
+  
   // *ngIf APPROACH FOR HANDLING ERRORS 
   @Input() message: string = 'ello'
   @Output() close = new EventEmitter<void>();
